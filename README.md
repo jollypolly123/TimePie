@@ -87,16 +87,16 @@ This app helps you keep track of the medical supplements you need to take and ho
 
 ## Wireframes
 
-<img src="https://raw.githubusercontent.com/jollypolly123/TimePie/main/TimePie%20Drawing.jpg?raw=true" width=600>
+<img src="TimePie%20Drawing.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
 https://www.figma.com/file/tu74WWDHhlAGpXwdimLdZo/Untitled?node-id=0%3A1
-<img src="https://raw.githubusercontent.com/jollypolly123/TimePie/main/TimePie%20Design.png?raw=true" width=1200>
+<img src="TimePie%20Design.png" width=1200>
 
 ### [BONUS] Interactive Prototype
 
-<img src="https://raw.githubusercontent.com/jollypolly123/TimePie/main/prototype.gif?raw=true" width=300>
+<img src="prototype.gif" width=300>
 
 ## Schema
 
