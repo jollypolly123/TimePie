@@ -8,17 +8,18 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/etUserName"
+        android:id="@+id/UserName"
         android:layout_width="291dp"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="#7E4718"
         android:ems="10"
+        android:maxLines="1"
         android:gravity="start|top"
-        android:hint="UserName"
+        android:hint="User Name"
         android:inputType="textMultiLine"
-        android:textColor="#BB3E3A"
-        android:textSize="25sp"
+        android:textColor="#7E4718"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -30,15 +31,16 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#7E4718"
         android:ems="10"
+        android:maxLines="1"
         android:gravity="start|top"
         android:hint="Email"
         android:inputType="textMultiLine"
-        android:textColor="#BB3E3A"
-        android:textSize="25sp"
+        android:textColor="#7E4718"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etPhone"
-        app:layout_constraintTop_toBottomOf="@+id/etUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/UserName" />
 
     <EditText
         android:id="@+id/etPhone"
@@ -47,50 +49,53 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="#7E4718"
         android:ems="10"
+        android:maxLines="1"
         android:gravity="start|top"
         android:hint="Phone"
         android:inputType="textMultiLine"
-        android:textColor="#BB3E3A"
-        android:textSize="25sp"
+        android:textColor="#7E4718"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/Password"
         android:layout_width="291dp"
         android:layout_height="56dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#7E4718"
         android:ems="10"
+        android:maxLines="1"
         android:gravity="start|top"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="#BB3E3A"
-        android:textSize="25sp"
+        android:textColor="#7E4718"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPhone" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/signup"
         android:layout_width="162dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="#BB3E3A"
         android:text="SignUP"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="237dp"
         android:layout_height="68dp"
         android:layout_marginTop="116dp"
-        android:text="Time Pie"
+        android:text="TimePie"
         android:textAlignment="center"
         android:textColor="#7E4718"
         android:textSize="50sp"

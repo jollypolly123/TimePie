@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TimePie</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">gPy1h7yfht7S2X6D8myjtgpiVFpoHDgSCtX37C8S</string>
+    <string name="back4app_client_key">nTbJ17SX17qYrVIz2zSnOiZijlLP5gtqT46Sfwkm</string>
 </resources>
