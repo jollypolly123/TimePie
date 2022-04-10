@@ -20,6 +20,7 @@
         android:inputType="textMultiLine"
         android:textColor="#7E4718"
         android:textSize="28sp"
+        android:fontFamily="@font/inter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -37,6 +38,7 @@
         android:inputType="textMultiLine"
         android:textColor="#7E4718"
         android:textSize="28sp"
+        android:fontFamily="@font/inter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etPhone"
@@ -55,6 +57,7 @@
         android:inputType="textMultiLine"
         android:textColor="#7E4718"
         android:textSize="28sp"
+        android:fontFamily="@font/inter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail" />
@@ -72,6 +75,7 @@
         android:inputType="textPassword"
         android:textColor="#7E4718"
         android:textSize="28sp"
+        android:fontFamily="@font/inter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPhone" />
@@ -82,7 +86,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="#BB3E3A"
-        android:text="SignUP"
+        android:text="Sign UP"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,6 +99,7 @@
         android:layout_width="237dp"
         android:layout_height="68dp"
         android:layout_marginTop="116dp"
+        android:fontFamily="@font/nunito_black"
         android:text="TimePie"
         android:textAlignment="center"
         android:textColor="#7E4718"

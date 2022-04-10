@@ -18,13 +18,11 @@ class LaunchActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnLogin).setOnClickListener{
             val intent = Intent(this@LaunchActivity, LoginActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         findViewById<Button>(R.id.btnSignUp).setOnClickListener{
             val intent = Intent(this@LaunchActivity, SignupActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 
