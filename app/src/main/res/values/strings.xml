@@ -5,4 +5,13 @@
     <!-- Paste BOTH strings as required -->
     <string name="back4app_app_id">gPy1h7yfht7S2X6D8myjtgpiVFpoHDgSCtX37C8S</string>
     <string name="back4app_client_key">nTbJ17SX17qYrVIz2zSnOiZijlLP5gtqT46Sfwkm</string>
+    <string name="supplements">Supplements</string>
+    <string name="edit_supplement">Edit Supplement</string>
+    <string name="done">Done</string>
+    <string name="name">Name</string>
+    <string name="supplement_name">Supplement Name</string>
+    <string name="description">Description</string>
+    <string name="edit_supplement_description">Enter the supplement description here</string>
+    <string name="supplement_name">Supplement Name</string>
+    <string name="x_times_daily">X times daily</string>
 </resources>
