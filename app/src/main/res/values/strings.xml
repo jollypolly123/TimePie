@@ -9,8 +9,18 @@
     <string name="edit_supplement">Edit Supplement</string>
     <string name="done">Done</string>
     <string name="name">Name</string>
+    <string name="new_supplement">New Supplement</string>
     <string name="supplement_name">Supplement Name</string>
     <string name="description">Description</string>
     <string name="edit_supplement_description">Enter the supplement description here</string>
     <string name="x_times_daily">X times daily</string>
+
+    <string name="selected_item">Daily Frequency</string>
+    <string-array name="daily_frequency_array">
+        <item>Once</item>
+        <item>Twice</item>
+        <item>Three</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

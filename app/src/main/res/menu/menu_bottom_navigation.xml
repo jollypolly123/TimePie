@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_pie_chart"
+        android:title="Home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_calendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="Compose"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_supplement"
+        android:icon="@drawable/ic_add"
+        android:title="Profile"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile"
+        app:showAsAction="always" />
+</menu>
