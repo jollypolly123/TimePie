@@ -70,10 +70,10 @@
 
     <Spinner
         android:id="@+id/dayFreqSpinner"
-        android:tooltipText="Frequency"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:tooltipText="Frequency"
         app:layout_constraintBottom_toBottomOf="@+id/tvDayFreq"
         app:layout_constraintEnd_toEndOf="@+id/etSupName"
         app:layout_constraintHorizontal_bias="1.0"
