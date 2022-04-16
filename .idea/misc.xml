@@ -3,9 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Lauri/Documents/Programming/AndroidStudioProjects/TimePie/app/src/main/res/layout/edit_supplement.xml" value="0.264" />
-        <entry key="..\:/Users/Lauri/Documents/Programming/AndroidStudioProjects/TimePie/app/src/main/res/layout/item_supplement.xml" value="0.2" />
-        <entry key="..\:/Users/Lauri/Documents/Programming/AndroidStudioProjects/TimePie/app/src/main/res/layout/list_supplements.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/drawable/ic_add.xml" value="0.2115" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/drawable/ic_calendar.xml" value="0.2115" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/drawable/ic_pie_chart.xml" value="0.2115" />
@@ -13,15 +10,24 @@
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/drawable/ic_profile.xml" value="0.2115" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/font/nunito_black.xml" value="0.28020833333333334" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/font/nunito_bold.xml" value="0.28020833333333334" />
-        <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/font/nunito_semibold.xml" value="0.28020833333333334" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/layout/add_supplement.xml" value="0.25" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/layout/edit_supplement.xml" value="0.264" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/layout/fragment_add_supplement.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/layout/item_supplement.xml" value="0.536" />
-        <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/layout/spinner_item.xml" value="0.25" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/TimePie/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/drawable/ic_add.xml" value="0.176" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/drawable/ic_calendar.xml" value="0.176" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/drawable/ic_pill.xml" value="0.1755" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/layout/activity_launch.xml" value="0.264" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/layout/edit_supplement.xml" value="0.264" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/layout/item_supplement.xml" value="0.264" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/layout/list_supplements.xml" value="0.4" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/TimePie/app/src/main/res/menu/menu_main.xml" value="0.24615384615384617" />
       </map>
     </option>
   </component>
