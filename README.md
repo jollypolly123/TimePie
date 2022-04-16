@@ -1,33 +1,55 @@
 # TimePie
-
+ 
 ## Table of Contents
-
+ 
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-1. [Schema](#Schema)
-
+2. [Product Spec](#Product-Spec)
+3. [User_Stories](#User-Stories)
+4. [Video_Walkthrough](#Video-Walkthrough)
+5. [Wireframes](#Wireframes)
+6. [Schema](#Schema)
+ 
 ## Overview
-
+ 
 ### Description
-
+ 
 This app helps you keep track of the medical supplements you need to take and how you spend your days, similar to a bullet journal. It also allows you to reflect on your day, week, year, etc.
-
+ 
 ### App Evaluation
-
+ 
 - **Category:** Calendar/Journaling
 - **Mobile:** personalized to each user, notifications, push, real-time updates
 - **Story:** Keep track of medical supplements and balanced mental health
 - **Market:** Anyone who takes medicine on a regular basis and wants to journal or track parts of their life
 - **Habit:** Habit-forming because users need to input and check when to regularly take their medicine. They are also encouraged to write down how they are feeling and what they are thinking, which can become a regular activity.
 - **Scope:** Clearly defined and buildable in a month.
-
+ 
 ## Product Spec
-
+ 
+## Implemented User Stories
+ 
+The following **required** functionality is completed:
+ 
+- [X] User can sign up to create a new account using Parse authentication.
+- [X] User can log in and log out of his or her account.
+- [X] The current signed in user is persisted across app restarts.
+- [X] User can switch between different views using Bottom Navigation View.
+- [X] User can view a screen to add supplements.
+ 
+## Video Walkthrough
+ 
+Here's a walkthrough of implemented user stories:
+ 
+<img src='WalkThrough.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+ 
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+ 
+---
+ 
 ### 1. User Stories (Required and Optional)
-
+ 
 **Required Must-have Stories**
-
+ 
 - Sign up to create an account
 - Log in and log out of app
 - Create categories for their daily activities
@@ -36,13 +58,13 @@ This app helps you keep track of the medical supplements you need to take and ho
 - View a specific day/week/year
 - View reflection notes
 - View overarching calendar
-
+ 
 **Optional Nice-to-have Stories**
-
+ 
 - Import third-party information
-
+ 
 ### 2. Screen Archetypes
-
+ 
 - Login
   - Sign up to create an account
   - Log in and log out of app
@@ -64,46 +86,46 @@ This app helps you keep track of the medical supplements you need to take and ho
   - View a specific day/week/year
 - Year detail view
   - View a specific day/week/year
-
+ 
 ### 3. Navigation
-
+ 
 **Tab Navigation** (Tab to Screen)
-
+ 
 - Supplement input
   - Supplement input view
 - Reflection input
   - Reflection input view
 - Category input
   - Category input view
-
+ 
 **Flow Navigation** (Screen to Screen)
-
+ 
 - Login Screen
   - Sign Up
   - Log In
 - Main calendar view
   - Tab Navitaion
   - Kebab menu (3-dot on right-hand side)
-
+ 
 ## Wireframes
-
+ 
 <img src="TimePie%20Drawing.jpg" width=600>
-
+ 
 ### [BONUS] Digital Wireframes & Mockups
-
+ 
 https://www.figma.com/file/tu74WWDHhlAGpXwdimLdZo/Untitled?node-id=0%3A1
 <img src="TimePie%20Design.png" width=1200>
-
+ 
 ### [BONUS] Interactive Prototype
-
+ 
 <img src="prototype.gif" width=300>
-
+ 
 ## Schema
-
+ 
 ### Models
-
+ 
 **Supplement**
-
+ 
 | **Property**    | **Type**        | **Description**                                            |
 | --------------- | --------------- | ---------------------------------------------------------- |
 | name            | String          | name of supplement                                         |
@@ -112,9 +134,9 @@ https://www.figma.com/file/tu74WWDHhlAGpXwdimLdZo/Untitled?node-id=0%3A1
 | intake          | Dictionary      | key is time, value is dose                                 |
 | time            | DateTime        | time to remind user                                        |
 | dose            | Int             | number of dose per intake                                  |
-
+ 
 **Reflection**
-
+ 
 | **Property** | **Type** | **Description**                              |
 | ------------ | -------- | -------------------------------------------- |
 | reflectionId | String   | unique id for the reflection (defailt field) |
@@ -123,9 +145,9 @@ https://www.figma.com/file/tu74WWDHhlAGpXwdimLdZo/Untitled?node-id=0%3A1
 | year         | DateTime | year of the reflection                       |
 | content      | String   | the reflection                               |
 | rating       | Int      | score out of 10 for the day                  |
-
+ 
 **Category**
-
+ 
 | **Property**  | **Type** | **Description**                              |
 | ------------- | -------- | -------------------------------------------- |
 | categoryId    | String   | unique id for the reflection (default field) |
@@ -135,9 +157,9 @@ https://www.figma.com/file/tu74WWDHhlAGpXwdimLdZo/Untitled?node-id=0%3A1
 | daily_status  | Int      | amount of time spent on category in the day  |
 | weekly_status | Int      | amount of time spent on category in the week |
 | yearly_status | Int      | amount of time spent on category in the year |
-
+ 
 ### Networking
-
+ 
 - Login
   - (Create/POST) Create a new user
   - (Read/GET) Query user to log in
@@ -153,3 +175,4 @@ https://www.figma.com/file/tu74WWDHhlAGpXwdimLdZo/Untitled?node-id=0%3A1
   - (Read/GET) View all existing supplements
 - Reflection view
   - (Create/POST) Create a new reflection
+ 
