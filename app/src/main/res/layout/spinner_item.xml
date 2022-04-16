@@ -10,4 +10,6 @@
     android:text="TextView"
     android:textColor="@color/dark_red"
     android:textSize="15sp"
+    android:layout_marginRight="15dp"
+    app:drawableRightCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
     app:layout_constraintTop_toTopOf="parent" />
