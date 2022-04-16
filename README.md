@@ -44,9 +44,7 @@ Here's a walkthrough of implemented user stories:
  
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
  
----
- 
-### 1. User Stories (Required and Optional)
+### 1. Planned User Stories (Required and Optional)
  
 **Required Must-have Stories**
  
