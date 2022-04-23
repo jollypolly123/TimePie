@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val fragmentManager: FragmentManager = supportFragmentManager
-        var bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
         bottomNav.setOnItemSelectedListener{ item ->
             var fragmentToShow: Fragment? = null
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.action_supplement -> {
                     Toast.makeText(this, "Compose", Toast.LENGTH_SHORT).show()
-                    fragmentToShow = AddSupplementFragment()
+                    fragmentToShow = ViewSupplementsFragment()
                 }
 
                 R.id.action_profile -> {

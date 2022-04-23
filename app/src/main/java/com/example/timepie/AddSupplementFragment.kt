@@ -1,18 +1,18 @@
 package com.example.timepie
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
+import com.example.timepie.models.Supplement
+import com.parse.ParseFile
+import com.parse.ParseUser
+import java.io.File
 
 class AddSupplementFragment : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,6 +51,32 @@ class AddSupplementFragment : Fragment() {
                 override fun onNothingSelected(parent: AdapterView<*>) {
                     // write code to perform some action
                 }
+            }
+        }
+
+        view.findViewById<Button>(R.id.doneButton).setOnClickListener {
+            val name = view.findViewById<EditText>(R.id.etSupName).text.toString()
+            val frequency = view.findViewById<TextView>(R.id.tvDayFreq).text.toString().toInt()
+            val user = ParseUser.getCurrentUser()
+            submitSupplement(name, frequency, user)
+//            requireFragmentManager().beginTransaction()
+//                .replace(R.id.activity_main, ViewSupplementsFragment()).addToBackStack(null).commit()
+        }
+    }
+
+    private fun submitSupplement(name: String, frequency: Number, user: ParseUser) {
+        val supplement = Supplement()
+        supplement.setName(name)
+        supplement.setFrequency(frequency)
+        supplement.setUser(user)
+        supplement.saveInBackground { exception ->
+            if (exception != null) {
+                Log.e(TAG, "Error while saving post")
+                exception.printStackTrace()
+            } else {
+                Log.i(TAG, "Successfully saved post")
+                view?.findViewById<EditText>(R.id.etSupName)?.text?.clear()
+                Toast.makeText(requireContext(), "Post submitted!", Toast.LENGTH_SHORT).show()
             }
         }
     }

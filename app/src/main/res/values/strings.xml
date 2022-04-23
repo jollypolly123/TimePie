@@ -7,6 +7,7 @@
     <string name="back4app_client_key">nTbJ17SX17qYrVIz2zSnOiZijlLP5gtqT46Sfwkm</string>
     <string name="supplements">Supplements</string>
     <string name="edit_supplement">Edit Supplement</string>
+    <string name="newString">New</string>
     <string name="done">Done</string>
     <string name="name">Name</string>
     <string name="new_supplement">New Supplement</string>
@@ -16,11 +17,11 @@
     <string name="x_times_daily">X times daily</string>
 
     <string name="selected_item">Daily Frequency</string>
-    <string-array name="daily_frequency_array">
-        <item>Once</item>
-        <item>Twice</item>
-        <item>Three</item>
-    </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="daily_frequency">Daily Frequency</string>
+    <string-array name="daily_frequency_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>

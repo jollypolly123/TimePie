@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Daily Frequency"
+        android:text="@string/daily_frequency"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/etSupName"
         app:layout_constraintTop_toBottomOf="@+id/etSupName" />
