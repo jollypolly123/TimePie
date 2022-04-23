@@ -1,5 +1,6 @@
 package com.example.timepie
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.example.timepie.models.Supplement
 import com.parse.ParseFile
 import com.parse.ParseUser
@@ -56,11 +58,17 @@ class AddSupplementFragment : Fragment() {
 
         view.findViewById<Button>(R.id.doneButton).setOnClickListener {
             val name = view.findViewById<EditText>(R.id.etSupName).text.toString()
-            val frequency = view.findViewById<TextView>(R.id.tvDayFreq).text.toString().toInt()
+            Log.i(TAG, name)
+            val frequency = view.findViewById<Spinner>(R.id.dayFreqSpinner).selectedItem.toString().toInt()
+            Log.i(TAG, frequency.toString())
             val user = ParseUser.getCurrentUser()
-            submitSupplement(name, frequency, user)
-//            requireFragmentManager().beginTransaction()
-//                .replace(R.id.activity_main, ViewSupplementsFragment()).addToBackStack(null).commit()
+            Log.i(TAG, user.toString())
+            if (user != null) {
+                submitSupplement(name, frequency, user)
+            } else {
+                val showLogin = Intent(requireContext(), LoginActivity::class.java)
+                startActivity(showLogin)
+            }
         }
     }
 
@@ -71,12 +79,20 @@ class AddSupplementFragment : Fragment() {
         supplement.setUser(user)
         supplement.saveInBackground { exception ->
             if (exception != null) {
-                Log.e(TAG, "Error while saving post")
+                Log.e(TAG, "Error while saving supplement")
                 exception.printStackTrace()
+                if (name.isEmpty()) {
+                    Toast
+                        .makeText(requireContext(), "Please fill in the supplement name", Toast.LENGTH_SHORT)
+                        .show()
+                }
             } else {
-                Log.i(TAG, "Successfully saved post")
                 view?.findViewById<EditText>(R.id.etSupName)?.text?.clear()
-                Toast.makeText(requireContext(), "Post submitted!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Supplement submitted!", Toast.LENGTH_SHORT).show()
+                parentFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.flContainer, ViewSupplementsFragment())
+                    .commit()
             }
         }
     }
