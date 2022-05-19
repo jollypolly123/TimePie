@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.timepie.models.Supplement
 import com.parse.ParseQuery
+import com.parse.ParseUser
 
 open class ViewSupplementsFragment : Fragment() {
 
@@ -59,22 +60,25 @@ open class ViewSupplementsFragment : Fragment() {
         val query: ParseQuery<Supplement> = ParseQuery.getQuery(Supplement::class.java)
 
         query.include(Supplement.KEY_USER)
+        query.whereEqualTo(Supplement.KEY_USER, ParseUser.getCurrentUser())
         query.addDescendingOrder("createdAt")
+
         query.findInBackground { supplements, e ->
             if (e != null) {
                 Log.e(TAG, "some problem")
             } else {
                 if (supplements != null) {
+                    Log.i(TAG, "Supplements retrieved, total ${supplements.size}")
                     for (supplement in supplements) {
                         Log.i(
                             TAG,
-                            "Successful query ${supplement.getDescription()} by ${supplement.getUser()
-                                ?.fetchIfNeeded()?.username
-                            }"
+                            "Successful query ${supplement.getName()}"
                         )
                     }
                     allSupplements.addAll(supplements)
                     adapter.notifyDataSetChanged()
+                } else {
+                    Log.i(TAG, "No supplements")
                 }
             }
         }

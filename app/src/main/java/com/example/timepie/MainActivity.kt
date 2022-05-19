@@ -24,22 +24,26 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.action_home -> {
                     Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
-                    fragmentToShow = AddSupplementFragment()
+                    fragmentToShow = HomeFragment()
+                    // TODO: change to home fragment
                 }
 
                 R.id.action_calendar -> {
-                    Toast.makeText(this, "Compose", Toast.LENGTH_SHORT).show()
-                    fragmentToShow = AddSupplementFragment()
+                    Toast.makeText(this, "Calendar", Toast.LENGTH_SHORT).show()
+                    fragmentToShow = CalendarFragment()
+                    // TODO: work on calendar fragment (completely new)
                 }
 
                 R.id.action_supplement -> {
                     Toast.makeText(this, "Compose", Toast.LENGTH_SHORT).show()
                     fragmentToShow = ViewSupplementsFragment()
+                    // TODO: work on AddSupplement, SupplementDetail (then mod VSF to click in)
                 }
 
                 R.id.action_profile -> {
                     Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
-                    fragmentToShow = AddSupplementFragment()
+                    fragmentToShow = ProfileFragment()
+                    // TODO: change to profile fragment
                 }
             }
 

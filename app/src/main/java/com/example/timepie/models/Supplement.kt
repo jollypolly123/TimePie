@@ -47,7 +47,7 @@ import org.json.JSONObject
  * frequency : Number
  * user : User
  */
-@ParseClassName("Post")
+@ParseClassName("Supplement")
 class Supplement : ParseObject() {
 
     fun getName(): String? {
