@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Calendar", Toast.LENGTH_SHORT).show()
                     fragmentToShow = CalendarFragment()
                     // TODO: work on calendar fragment (completely new)
+                    // TODO: add Reflection class, register subclass in TimepieApplication.kt
                 }
 
                 R.id.action_supplement -> {

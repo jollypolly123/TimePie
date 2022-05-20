@@ -19,6 +19,14 @@
     <string name="selected_item">Daily Frequency</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="daily_frequency">Daily Frequency</string>
+    <string name="weekly_frequency">Weekly Frequency</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
     <string-array name="daily_frequency_array">
         <item>1</item>
         <item>2</item>

@@ -23,11 +23,11 @@
         android:id="@+id/tvNewSup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
         android:fontFamily="@font/nunito_black"
         android:text="@string/new_supplement"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/doneButton"
-        app:layout_constraintEnd_toStartOf="@+id/doneButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/doneButton" />
 
@@ -35,26 +35,24 @@
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
         android:layout_marginTop="17dp"
         android:fontFamily="@font/nunito_bold"
         android:text="@string/name"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNewSup"
         app:layout_constraintTop_toBottomOf="@+id/tvNewSup" />
 
     <EditText
         android:id="@+id/etSupName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
         android:backgroundTint="@color/dark_brown_50"
         android:ems="10"
         android:inputType="textCapWords"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNewSup"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
     <TextView
@@ -65,7 +63,7 @@
         android:fontFamily="@font/nunito_bold"
         android:text="@string/daily_frequency"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/etSupName"
+        app:layout_constraintStart_toStartOf="@+id/tvNewSup"
         app:layout_constraintTop_toBottomOf="@+id/etSupName" />
 
     <Spinner
@@ -80,6 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etSupName" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/intakes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -87,7 +86,128 @@
         android:layout_marginEnd="22dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNewSup"
         app:layout_constraintTop_toBottomOf="@+id/tvDayFreq" />
 
+    <TextView
+        android:id="@+id/tvWeekFreq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/weekly_frequency"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvNewSup"
+        app:layout_constraintTop_toBottomOf="@+id/intakes" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintStart_toStartOf="@+id/tvNewSup"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeekFreq">
+
+        <Button
+            android:id="@+id/sundayButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:background="@drawable/roundedbutton"
+            android:text="@string/sun"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+
+        <Button
+            android:id="@+id/mondayButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:background="@drawable/roundedbutton"
+            android:text="@string/mon"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+
+        <Button
+            android:id="@+id/tuesdayButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:background="@drawable/roundedbutton"
+            android:text="@string/tue"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+
+        <Button
+            android:id="@+id/wednesdayButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:background="@drawable/roundedbutton"
+            android:text="@string/wed"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+
+        <Button
+            android:id="@+id/thursdayButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:background="@drawable/roundedbutton"
+            android:text="@string/thu"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+
+        <Button
+            android:id="@+id/fridayButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:background="@drawable/roundedbutton"
+            android:text="@string/fri"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+
+        <Button
+            android:id="@+id/saturdayButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="0dp"
+            android:background="@drawable/roundedbutton"
+            android:text="@string/sat"
+            android:maxLines="1" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
