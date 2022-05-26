@@ -1,6 +1,5 @@
 package com.example.timepie
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,13 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.timepie.models.Supplement
-import com.parse.ParseFile
 import com.parse.ParseUser
-import java.io.File
 
-class AddSupplementFragment : Fragment() {
+open class AddSupplementFragment : Fragment() {
+
+    lateinit var intakeAdapter: SpinnerAdapter
+    private var intakeCount: MutableList<Int> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +29,7 @@ class AddSupplementFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val spinner: Spinner = view.findViewById(R.id.dayFreqSpinner)
+        val intakes: RecyclerView = view.findViewById(R.id.intakes)
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
@@ -39,36 +41,41 @@ class AddSupplementFragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinner.adapter = adapter
+        }
 
-            val frequencies = resources.getStringArray(R.array.daily_frequency_array)
-            spinner.onItemSelectedListener = object :
-                AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>,
-                                            view: View, position: Int, id: Long) {
-                    Toast.makeText(requireContext(),
-                        getString(R.string.selected_item) + " " +
-                                "" + frequencies[position], Toast.LENGTH_SHORT).show()
-                }
+        val frequencies = resources.getStringArray(R.array.daily_frequency_array)
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>,
+                                        view: View, position: Int, id: Long) {
+                Toast.makeText(requireContext(),
+                    getString(R.string.selected_item) + " " + frequencies[position], Toast.LENGTH_SHORT).show()
+                intakeCount.clear()
+                val spinnerVal = spinner.selectedItem.toString().toInt()
+                (1.. spinnerVal).forEach { intakeCount.add(it) }
+                Log.i(TAG, intakeCount.toString())
 
-                override fun onNothingSelected(parent: AdapterView<*>) {
-                    // write code to perform some action
-                }
+                intakeAdapter.notifyItemRangeChanged(0, 3)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
             }
         }
+
+        (1.. spinner.selectedItem.toString().toInt()).forEach { intakeCount.add(it) }
+        intakeAdapter = SpinnerAdapter(requireContext(), intakeCount)
+        intakes.adapter = intakeAdapter
+
+        intakes.layoutManager = LinearLayoutManager(requireContext())
 
         view.findViewById<Button>(R.id.doneButton).setOnClickListener {
             val name = view.findViewById<EditText>(R.id.etSupName).text.toString()
             Log.i(TAG, name)
-            val frequency = view.findViewById<Spinner>(R.id.dayFreqSpinner).selectedItem.toString().toInt()
+            val frequency = spinner.selectedItem.toString().toInt()
             Log.i(TAG, frequency.toString())
             val user = ParseUser.getCurrentUser()
             Log.i(TAG, user.toString())
-            if (user != null) {
-                submitSupplement(name, frequency, user)
-            } else {
-                val showLogin = Intent(requireContext(), LoginActivity::class.java)
-                startActivity(showLogin)
-            }
+            submitSupplement(name, frequency, user)
         }
     }
 

@@ -12,7 +12,8 @@ class SupplementAdapter(val context: Context, private val supplements: List<Supp
     : RecyclerView.Adapter<SupplementAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_supplement, parent, false)
+        val view = LayoutInflater.from(context)
+            .inflate(R.layout.item_supplement, parent, false)
         return ViewHolder(view)
     }
 
@@ -34,8 +35,6 @@ class SupplementAdapter(val context: Context, private val supplements: List<Supp
          * user : User
          */
         private val name: TextView = itemView.findViewById(R.id.supplementName)
-//        private val createdAt: ImageView = itemView.findViewById(R.id.createdAt)
-//        private val description: TextView = itemView.findViewById(R.id.description)
         private val frequency: TextView = itemView.findViewById(R.id.frequency)
 
         fun bind(supplement: Supplement) {
